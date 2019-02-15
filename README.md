@@ -1,1 +1,1 @@
-# SocialCops-Data-Science-Intern-Challenge
+# SocialCops Data Science Intern Challenge
