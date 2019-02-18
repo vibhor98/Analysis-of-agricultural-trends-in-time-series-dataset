@@ -30,7 +30,16 @@ The agriculture data contains two files in `./Mandi_Data` directory namely:
 ## Methodology & Analysis
 
 ### Section 1: Exploratory Data Analysis
+* In MSP prices dataset, MSP prices for 10 commodities are missing.
+* In monthly prices dataset, there are no missing enteries.
+![Monthly prices box plot](https://github.com/vibhor98/SocialCops-Data-Science-Intern-Challenge/blob/master/Images/monthly_prices_boxplot%20.png)
 
+The above **Box Plot** is for 'Bajri' commodity. It represents the average monthly prices for years: 2014, 2015 and 2016. The values in the rectangular box represent 1st, 2nd and 3rd Quartiles from bottom to up for every timestamp. The dark points away from the whiskers are outliers. For ex- In Mar 2016, the average price value (per quintal) is close to Rs. 6000 which is clearly an outlier.
+
+Box Plot provides a very good visualization to find out the presence of outliers in the dataset.
+![Mandi box plot](https://github.com/vibhor98/SocialCops-Data-Science-Intern-Challenge/blob/master/Images/mandi_boxplot.png)
+
+The above box plot for MSPs (Minimum Support Prices) for various commodities evidents that there are no points outside the whiskers and hence, **no outliers** in the dataset: 'CMO_MSP_Mandi'.
 
 ### Section 2: Understanding price fluctuations accounting the seasonal effect
 
@@ -38,7 +47,13 @@ Since there are total **352 commodities** and **349 APMCs** in the dataset, we h
 
 For each pair of commodity and APMC, we have done the following:
 
-* Plot the monthly line graph for minimum, maximum and average prices of the commodity belonging to a given APMC to analyse the seasonality in the monthly prices.
+* Plot the monthly line graph for minimum, maximum and average prices of the commodity belonging to a given APMC to analyse the seasonality in the monthly prices. Below is the surge in the graph for Onion in Ahmednagar APMC.
+
+![Onion Surge](https://github.com/vibhor98/SocialCops-Data-Science-Intern-Challenge/blob/master/Images/onion_surge.png)
+The above plots clearly demonstrate a **peak-shaped curve (surge)** with peak around September' 2015 and rapid variations at specific time-frames. It is evident that the seasonality is yearly.
+
+**Reason:** The main reason for this surge is **decreased supply**. Back in 2015, due to considerable **lower production of Onions**, supply had largely dropped. Consequently, the retail prices jumped. It had affected Onion prices in all the APMCs not only in Maharashtra but also in India as a whole.
+
 * **Stationarity Test:** A time series is said to be stationary if its **statistical properties** such as mean and variance remain **constant over time**.
   * **Dickey Fuller Test:** It is one of the statistical tests for checking stationarity. Here, the null hypothesis is that the TS is non-stationary and alternate hypothesis is that the TS is stationary. The test results comprise of a Test Statistic and some Critical Values for difference confidence levels. If the **‘Test Statistic’ is less than the ‘Critical Value’**, we can reject the null hypothesis and say that the time series is stationary.
 * De-seasonalizing the time series (making the TS stationary):
@@ -48,7 +63,8 @@ For each pair of commodity and APMC, we have done the following:
   * So, we need to remove both trends and seasonality to make TS stationary.
 * Removing the seasonality from the time series:
   * **Differencing with lag 1:** One of the most common methods of dealing with both trend and seasonality is differencing. In this technique, we take the difference of the observation at a particular instant with that at the previous instant.
-  * **STR Decomposition:** STR refers to Seasonality, Trend and Residual. In this approach, trend and seasonality are modeled separately from TS data and residual part of the series becomes stationary.
+  * **STR Decomposition:** STR refers to Seasonality, Trend and Residual. In this approach, trend and seasonality are modeled separately from TS data and residual part of the series becomes stationary. Below is the STR decomposition for APMC: Jamkhed and Commodity: Bajri
+  ![STR Decomposition](https://github.com/vibhor98/SocialCops-Data-Science-Intern-Challenge/blob/master/Images/STR_decomposition.png)
 * Comparison of APMC-wise commodity prices (max., average and min.) with MSPs: Line plots are plotted to clearly demonstrate how MSPs deviate largely from the average prices.
 
 ### Section 3: Analyse price fluctuations across different commodities in each season and year
@@ -76,4 +92,6 @@ The above bar plot demonstrates the Commodity-wise price fluctuations for 2015. 
 So, we can conclude that **APMC: Ahmednagar and Commodity: Onion suffer from the highest Price Fluctuations**.
 
 ## Results
-The above line plot demonstrates the variations in various prices (MSP, Average, Max. and Min.) of the commodity. It shows that for the selected commodity, the minimum prices set by the Government are quite low and the prices at which the commodities are being sold at APMCs are soaring high into the sky. The main reason for such a large price fluctuations between min. price set by the Government and actual price of the commodity can be: **Very high transportation cost**. Transportation Cost also depends on the geographical location of APMC. If the APMC is near to the farming lands, the cost is generally lower and very high in case of larger distances.
+![Price comparison](https://github.com/vibhor98/SocialCops-Data-Science-Intern-Challenge/blob/master/Images/price_comparison.png)
+
+The above line plot demonstrates the variations in various prices (MSP, Average, Max. and Min.) of Bajri in Jamkhed APMC. It shows that for the selected commodity, the minimum prices set by the Government are quite low and the prices at which the commodities are being sold at APMCs are soaring high into the sky. The main reason for such a large price fluctuations between min. price set by the Government and actual price of the commodity can be: **Very high transportation cost**. Transportation Cost also depends on the geographical location of APMC. If the APMC is near to the farming lands, the cost is generally lower and very high in case of larger distances.
