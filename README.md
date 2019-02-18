@@ -25,7 +25,7 @@ The agriculture data contains two files in `./Mandi_Data` directory namely:
 * max_price- Maximum price charged per quintal
 * modal_price- Mode (Average) price charged per quintal
 
-Analysis file: The complete analysis with description is in python notebook: `Analysis.ipynb`. 
+**Analysis file:** The complete analysis with description is in python notebook: `Analysis.ipynb`. 
 
 ## Methodology & Analysis
 
@@ -63,4 +63,17 @@ Firstly, we separated out the whole dataset year-wise (i.e. for 2014, 2015 and 2
 For each year in [2014, 2015, 2016], we do the following:
 * Plot line plot for maximum, average and minimum prices of the commodity for that year.
 * Take difference of maximum price and minimum price of the commodity to get the **Maximum Price Fluctuation** in that year.
-* Plot 2 bar plots (APMCs v/s Price Fluctuations and Commodities v/s Price Fluctuations) to visually analyse the max. Price Fluctuations corresponding to an APMC and Commodity for each year. 
+* Plot 2 bar plots (APMCs v/s Price Fluctuations and Commodities v/s Price Fluctuations) to visually analyse the max. Price Fluctuations corresponding to an APMC and Commodity for each year.
+
+![Price Fluctuations APMC-wise for 2015](https://github.com/vibhor98/SocialCops-Data-Science-Intern-Challenge/blob/master/Images/price_fluc_2015_apmc_barplot.png)
+
+The above bar plot demonstrates the APMC-wise price fluctuations for 2015. It clearly shows that **Ahmednagar** APMC suffers from the highest price fluctuations of Rs. 3,800 per quintal.
+
+![Price Fluctuations Commodity-wise for 2015](https://github.com/vibhor98/SocialCops-Data-Science-Intern-Challenge/blob/master/Images/price_fluc_2015_commodity_barplot.png)
+
+The above bar plot demonstrates the Commodity-wise price fluctuations for 2015. It clearly shows that **Onion** Commodity suffers from the highest price fluctuations. It is quite an expected result because in 2015, due to **very less supply of Onions** in the market especially during Sept and Oct' 2015, the **retail prices for Onion soared high** into the skies across different APMCs in the country. 
+
+So, we can conclude that **APMC: Ahmednagar and Commodity: Onion suffer from the highest Price Fluctuations**.
+
+## Results
+The above line plot demonstrates the variation of various prices (MSP, Average, Max. and Min.) of the commodity. It shows that for the selected commodity, the minimum prices set by the Government are quite low and the prices at which the commodities are being sold at APMCs are soaring high into the sky. The main reason for such a large price fluctuations between min. price set by the Government and actual price of the commodity can be: **Very high transportation cost**. Transportation Cost also depends on the geographical location of APMC. If the APMC is near to the farming lands, the cost is generally lower and very high in case of larger distances.
