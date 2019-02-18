@@ -95,3 +95,11 @@ So, we can conclude that **APMC: Ahmednagar and Commodity: Onion suffer from the
 ![Price comparison](https://github.com/vibhor98/SocialCops-Data-Science-Intern-Challenge/blob/master/Images/price_comparison.png)
 
 The above line plot demonstrates the variations in various prices (MSP, Average, Max. and Min.) of Bajri in Jamkhed APMC. It shows that for the selected commodity, the minimum prices set by the Government are quite low and the prices at which the commodities are being sold at APMCs are soaring high into the sky. The main reason for such a large price fluctuations between min. price set by the Government and actual price of the commodity can be: **Very high transportation cost**. Transportation Cost not only depends on the petrol/diesel prices but also depends on the geographical location of APMC. If the APMC is near to the farming lands, the cost is generally lower and very high in case of larger distances.
+
+## Running the project
+* Clone this repository by typing following command on the terminal:
+  
+  `git clone https://github.com/vibhor98/SocialCops-Data-Science-Intern-Challenge.git`
+* Run: `pip install requirements.txt` to install all the required dependencies.
+* Navigate to the directory containing `Analysis.ipynb` python notebook and run:
+`jupyter notebook` to open the analysis file.
