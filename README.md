@@ -13,7 +13,7 @@
 * Flag set of APMC/mandis and commodities with highest price fluctuation across different commodities in each relevant season, and year.
 
 ## Dataset Description
-The agriculture data contains two files namely:
+The agriculture data contains two files in `./Mandi_Data` directory namely:
     
   * 'CMO_MSP_Mandi.csv' contains Minimum Support Prices (MSPs) and Crop Type for each commodity.
   * 'Monthly_data_cmo.csv' contains the APMC-wise monthly prices (min., max. and average) for each and every commodity.
@@ -24,6 +24,8 @@ The agriculture data contains two files namely:
 * min_price- Minimum price charged per quintal
 * max_price- Maximum price charged per quintal
 * modal_price- Mode (Average) price charged per quintal
+
+Analysis file: The complete analysis with description is in python notebook: `Analysis.ipynb`. 
 
 ## Methodology & Analysis
 
