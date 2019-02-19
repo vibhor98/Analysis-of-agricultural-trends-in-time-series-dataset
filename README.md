@@ -100,6 +100,7 @@ The above line plot demonstrates the variations in various prices (MSP, Average,
 * Clone this repository by typing following command on the terminal:
   
   `git clone https://github.com/vibhor98/SocialCops-Data-Science-Intern-Challenge.git`
+
 * Run: `pip install requirements.txt` to install all the required dependencies.
 * Navigate to the directory containing `Analysis.ipynb` python notebook and run:
 `jupyter notebook` to open the analysis file.
